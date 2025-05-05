@@ -21,6 +21,11 @@ public partial class AddonMaster
         public void HandOver() => ClickButtonIfEnabled(HandOverButton);
         public void Cancel() => ClickButtonIfEnabled(CancelButton);
 
+        public void SelectItem1()
+        {
+            ClickHelper.ClickAddonComponent((AtkComponentBase*)Base, this.Addon->AtkComponentDragDrop250->OwnerNode, 0xC, EventType.ICON_TEXT_ROLL_OUT);
+        }
+
         public bool IsHandOverEnabled => HandOverButton->IsEnabled;
 
         public bool IsFilled
